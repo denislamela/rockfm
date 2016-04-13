@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html ng-app="rockfmApp">
+	<head>
+		<title>Felicidades Pirata - Rock FM</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+                <script src="assets/js/rockfmApp.js"></script>
+		<script src="assets/js/songsController.js"></script>
+	</head>
+	<body>
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">El pirata - Rock FM</a></li>
+							<li><a href="#1956">50's</a></li>
+							<li><a href="#1960">60's</a></li>
+							<li><a href="#1970">70's</a></li>
+							<li><a href="#1980">80's</a></li>
+							<li><a href="#1990">90's</a></li>
+							<li><a href="#2000">00's</a></li>
+							<li><a href="#2010">10's</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper" ng-controller="songsController">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="align-center">
+							<h1>Felicidades Pirata</h1>
+							<h2>60 años, 60 canciones</h2>
+							<h3>1 vida dedicada a la música</h3> 
+							<div class="image"><img src="images/el_pirata_2.jpg" alt="El pirata" data-position="center center" /></div>
+						</div>
+					</section>
+
+					<!-- 1956 -->
+					<div ng-repeat="song in songs">
+						<section id="{{song.year}}" class="wrapper style2 spotlights">
+							<section>
+								<div class="content">
+									<div class="inner">
+										<h2>{{song.year}} - {{song.name}} ({{song.artist}})</h2>
+										<p>{{song.description}}</p>
+                                                                                <div class="align-center">
+                                                                                    <a class="button special icon fa-music" href="{{song.url}}" title="{{song.url}}">{{song.name}}</a>
+                                                                                </div>
+                                                                        </div>
+								</div>
+							</section>
+						</section>
+					</div>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>Denís Lamela Martínez</li>		
+						<li><a href="https://twitter.com/denislamela" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/denislamela" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/denislamela" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/denislamela" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li>Diseño: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
